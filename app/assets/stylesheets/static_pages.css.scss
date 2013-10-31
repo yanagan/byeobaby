@@ -1,0 +1,543 @@
+// Place all the styles related to the StaticPages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+html, body, div, article, img, ul, li {
+	margin: 0;
+	padding: 0;	
+	/*overflow-y: scroll;*/
+	/*overflow-x: hidden;*/
+}
+
+body{
+	width: 100%;
+	/*overflow-x: hidden;*/
+	font-weight: 400;
+	font-family: 'Titillium Web', sans-serif;
+	/*font-family: 'Georgia';*/
+	/*font-size: 18px;*/
+	/*color: rgba(17, 23, 26, 0.7)	;*/
+	color: rgba(4, 53, 74, 0.7);
+	background-color: rgba(112, 178, 194, 0.5);
+}
+
+h1 {
+	
+	/*font-family: 'Nothing You Could Do', cursive;*/
+	font-family: 'Niconne', cursive;
+	/*font-family: 'Montez', cursive;*/
+	/*font-family: 'Patrick Hand SC', cursive;*/
+	/*font-family: 'Merienda', cursive;	*/
+	/*background-color: rgba(240, 250, 252, 0.9);*/
+	font-size: 5em;
+	color: #6C8F9E;
+	/*right: 48%;*/
+	/*-webkit-transform: rotate(-4deg);
+	-moz-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	transform: rotate(-4deg);*/
+
+}
+
+h2 {
+	margin-top: 0;
+	margin-bottom: 6%;
+	text-align: center;
+	font-weight: 200;
+	font-size: 24px;
+	/*font-family: 'Nothing You Could Do', cursive;*/
+	/*font-family: 'Niconne', cursive;*/
+	/*font-family: 'Montez', cursive;*/
+	/*font-family: 'Patrick Hand SC', cursive;*/
+	/*font-family: 'Merienda', cursive;*/
+	/*color: #044059;*/
+
+}
+
+article {
+
+	padding: 5% 8%;
+	margin: 3% 21% 14% 23%;
+	background-color: rgba(240, 250, 252, 0.9);
+	/*z-index: 999;*/
+	overflow-x: hidden;
+}
+
+p {
+	margin: 0 0 10px 0;
+}
+
+ul {
+	padding-left: 4%;
+}
+
+li {
+	list-style-type: none;
+	margin-top: -4px;
+}
+
+li:first-letter {
+ 	font-size: 150%;
+ 	/*margin-top: -10px;*/
+ 	/*padding-top: -20px;*/
+ }
+
+span {
+	color: #276155;
+}
+
+span:after {
+	content: " ";
+}
+
+a {
+	text-decoration: none;
+	color: #276155;
+	/*border-bottom: 1px solid;*/
+}
+
+.superscripted {
+	color: rgba(4, 53, 74, 0.7);
+	position: relative;
+	bottom: 0.4em;
+	font-size: 0.7em;
+}
+
+#sun {
+	position: absolute;
+	left: 3%;
+	top: 1%;
+	z-index: -11;
+}
+
+#logo {
+	/*border: 2px solid green;*/
+	position: relative;
+	/*width: 1px;*/
+	padding-top: 1.5%;
+}
+
+#logo img {
+	position: relative;
+	left: 26%;
+}
+
+#logo h1 {
+	position: absolute;
+	top: 27%;
+	left: 30%;
+	margin: 0;
+	padding: 0;
+	text-align: left;
+	/*color: white;*/
+	color: #A7C8D6;
+	/*color: #BAD7E3;*/
+	/*color: rgba(8, 56, 77, 0.3);*/
+}
+
+#services {
+	position: relative;
+	/*z-index: -1;*/
+}
+
+#services article {
+	margin-left: 19%;
+	margin-right: 31%;
+}
+
+#monkey {
+	/*border: 2px solid red;*/
+	/*display: inline;*/
+	position: relative;
+}
+
+#monkey-body {
+	/*border: 2px solid blue;*/
+	position: absolute;
+	top: -68px;
+	left: 60%;
+	display: inline;
+}
+
+#monkey-eyes {
+	/*border: 2px solid green;*/
+	position: absolute;
+	top: -68px;
+	left: 60%;
+	display: inline;
+}
+
+#childcare article{
+	margin-top: 0;
+	/*border:315px solid transparent;*/
+	/*border-image: url(images/monkey.gif) 100 100 no-repeat;*/
+}
+
+#childcare h2 {
+	margin-bottom: 0;
+}
+#childcare h5 {
+	text-align: center;
+	margin-top: 0;
+}
+
+#photos article{
+	margin-left: 17%;
+	margin-right: 17%;
+	padding-left: 4%;
+	padding-right: 4%;
+	padding-bottom: 7%;
+	/*text-align: center;*/
+	/*width: 900px;*/
+	/*height: 600px;*/
+	/*overflow: hidden;*/
+}
+
+.displayed {
+	/*border: 2px solid red;*/
+}
+
+ .displayed img {
+ 	margin: 0 0.2%;
+	width: 150px;
+	height: 150px;
+	overflow: hidden;
+	border-radius: 10px;
+	border: 1px solid #E0D9BA;
+	cursor: pointer;
+}
+
+.displayed img:hover {
+	/*cursor: pointer;*/
+}
+
+#slideshow {
+	/*border: 2px solid green;*/
+	display: none;
+	position: fixed;
+	top: 14%;
+	bottom: 0%;
+	right: 21%;
+	left: 21%;
+	background-color: #E9F3F5;
+}
+
+#slideshow img {
+	display: none;
+	position: relative;
+}
+
+
+
+#about img {
+	float: left;
+	width: 220px;
+	margin-right: 2%;
+	border-radius: 10px;
+
+}
+/***********************************************/
+/* MENU Navigation */
+
+nav#menu {
+	position: fixed;
+	right: 2%;
+	top: 44%;
+	z-index: 990;
+	width: 200px;
+}
+
+nav#menu li {
+	/*display: inline;*/
+	/*float: right;*/
+	display: block;
+	text-align: right;
+	margin: 1px;
+	position: relative;
+}
+
+nav#menu li:first-letter {
+	font-size: 100%;
+}
+
+nav#menu li:nth-child(1) a {
+	background-color: #70B2C2;
+}
+
+nav#menu li a{
+	/*border: 2px solid red;*/
+	position: relative;
+	height: 17px;
+	width: 17px;
+	background-color: #d9edf6;
+	border-radius: 3px;
+	transition: background-color 0.2s ease-in;	
+}
+
+nav#menu a {
+	display: inline-block;
+}
+
+nav#menu a:hover {
+	/*color: #32586B;*/
+	/*background-position: -24px 0px;*/
+	background-color: #70B2C2;
+	transition: background-color 0.1s ease-in;
+}
+
+/*MENU TOOLTIPs*/
+.tooltip {
+	display: none;
+	/*display: inline;*/
+	position: absolute;
+	right: 14%;
+	width: 90px;
+	/*margin-bottom: 10px;*/
+	margin-right: 10px;
+	background-color: #70B2C2;
+	text-align: center;
+}
+
+.tooltip p{
+	display: inline;
+	background-color: #70B2C2;
+	color: rgba(240, 250, 252, 0.8);
+	font-family: 'Nothing You Could Do';
+	text-align: center;
+}
+
+.tooltip p:after {
+	content: '';
+	display: inline;
+	position:absolute;
+    top: 5px;
+    right: -16px;
+	width: 0;
+	height: 0;
+	border-width: 5px 8px;
+	border-style: solid;
+    border-color: transparent transparent transparent #70B2C2;
+}
+
+#login-box {
+	/*border: 2px solid yellow;*/
+	position: fixed;
+	right: 2%;
+	top: -179px;
+	z-index: 1998;
+	width: 325px;
+}
+
+#login-box form {
+	/*background: url('images/portal-bg.png') ;*/
+	background-color: rgba(112, 178, 194, 0.8);
+	/*border: 2px solid blue;*/
+	margin: 0;
+	padding: 20px;
+
+}
+
+#login-box li:first-letter {
+	font-size: 100%;
+}
+
+#login-box li {
+	/*border: 2px solid pink;*/
+	margin: 1px;
+	padding: 5px 3px;
+	/*color: #EBF8FC;*/
+	color: rgba(235, 248, 252, 0.8);
+
+}
+
+#login-box label {
+	/*border: 2px solid red;*/
+	/*float: left;*/
+	font-size: 18px;
+
+}
+
+#login-box input:not([type=submit]) {
+	padding: 5px 3px;
+	width: 250px;
+	font-size: 16px;
+	color: rgba(4, 53, 74, 0.7);
+	border: 1px solid #70B2C2; /* same as rgba(112, 178, 194, 1);*/
+}
+
+::-webkit-input-placeholder { /* WebKit browsers */
+    color: #CCE0E8;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #CCE0E8;;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #CCE0E8;;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color: #CCE0E8;;
+}
+
+#login-box input[type=submit] {
+	background-color: #70B2C2;
+	border-top: 1px solid #9FC9D6;
+	border-left: 1px solid #9FC9D6;
+	border-bottom: 1px solid #66A0AD;
+	border-right: 1px solid #66A0AD;
+	font-size: 20px;
+	color: #EBF8FC;
+	width: 97%;
+	padding: 4px 0;
+}
+
+#login-box input[type=submit]:hover {
+	cursor: pointer;
+}
+
+#login-portal {
+	float: right;
+	padding: 2%;
+	background-color: rgba(112, 178, 194, 0.8);
+	color: #EBF8FC;
+	text-transform: uppercase;
+	/*border-radius: */
+	/* z-index: 999;
+	border: 1px solid #A3C9D6; */
+	-webkit-border-bottom-right-radius: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+	-moz-border-radius-bottomright: 5px;
+	-moz-border-radius-bottomleft: 5px;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+
+#login-portal:hover {
+	cursor: pointer;
+}
+
+.mini-nav {
+	display: inline;
+	position: relative;
+	float: right;
+	width: 22px;
+	right: -12%;
+	z-index: 999;
+	/*border: 1px solid red;*/
+}
+
+#home nav{
+	bottom: 37px;
+}
+
+#about nav {
+	bottom: 22px;
+}
+
+#photos nav {
+	left: 27px;
+}
+
+.mini-nav a{
+	background: url('images/list.png') no-repeat;
+}
+
+a.prev {
+	display: block;
+	height: 19px;
+	width: 19px;
+	margin-top: 0px;
+	margin-bottom: 5px;
+	padding-right: 1px;
+	background-position: 2px -45px;
+	/*border: 1px solid blue;	*/
+}
+
+a.prev:hover{
+	background-position: -22px -45px;
+}
+
+a.next {
+	display: block;
+	right: 0;
+	height: 19px;
+	width: 19px;
+	margin-top: 12px;
+	margin-right: 0;
+	padding-right: 1px;
+	background-position: 2px -22px;
+	/*border: 1px solid green;	*/
+}
+
+a.next:hover{
+	background-position: -22px -22px;
+}
+
+/***********************************************/
+/*PARALLAX OBJECTS*/
+#clouds-high, #clouds-low {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	/*border: 2px solid green;*/
+	z-index: -6;
+}
+
+#cloud1 {
+	position: absolute;
+	top: 170px;
+	left: 3%;
+}
+
+#cloud2 {
+	position: absolute;
+	top: 220px;
+	left: 15%;
+}
+
+#cloud3 {
+	position: absolute;
+	top: 40px;
+	left: 73%;
+	width: 111px;
+}
+
+#cloud4 {
+	position: absolute;
+	top: 270px;
+	left: 75%;
+}
+#cloud5 {
+	position: absolute;
+	top: 140px;
+	left: 89%;
+}
+
+#balloon1 {
+	position: absolute;
+	top: 63%;
+	left: -3%;
+	/*border: 2px solid red;*/
+}
+
+#airplane {
+	position: absolute;
+	top: 200px;
+	left: 32%;
+	z-index: -15;
+}
+
+#house {
+	position: relative;
+	border: 2px solid green;
+	z-index: -3;
+}
+
+#house img {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+
+	
